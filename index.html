@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<!-- this version has Peter Hofstee's feedback -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Ordonez - Research Scientist</title>
+    <style>
+
+        :root {
+            --main-blue: #1a237e;
+        }
+        
+        body {
+            font-family: 'Lucida Console', monospace;
+            font-size: 12px;
+            color: #111;
+            background-color: white;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 50px;
+            box-sizing: border-box;
+            line-height: 1.4;
+        }
+
+        .landing {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+            border-bottom: 2px solid var(--main-blue);
+        }
+
+        .name-title {
+            text-align: center;
+        }
+
+        .name-title h1 {
+            color: var(--main-blue);
+            margin-bottom: 10px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .contact-links a {
+            color: var(--main-blue);
+            text-decoration: none;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .section {
+            margin-bottom: 10px;
+        }
+
+        .section h2 {
+            color: var(--main-blue);
+            border-bottom: 1px solid var(--main-blue);
+            padding-bottom: 5px;
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 3px solid var(--main-blue);
+        }
+
+        .achievements-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .achievements-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .achievements-list li::before {
+            content: "►";
+            position: absolute;
+            left: 0;
+            color: var(--main-blue);
+        }
+
+        .achievements-list ul li::before {
+            content: none;
+        }
+
+        .achievements-list ul {
+            list-style-type: disc;
+        }
+
+        .highlight-box {
+            border-left: 3px solid var(--main-blue);
+            padding-left: 15px;
+            margin: 10px 0;
+        }
+
+        .link-preview {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 300px;
+            width: max-content; /* Ensure content doesn't force unnecessary width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-radius: 4px;
+            font-size: 14px;
+            word-break: break-word; /* Ensure long URLs break */
+            overflow-wrap: break-word;
+            display: none;
+        }
+
+        /* Optional: Add some directional styling */
+        .link-preview.preview-left {
+            transform-origin: right center;
+        }
+
+        .link-preview.preview-right {
+            transform-origin: left center;
+        }
+
+        .link-preview.preview-top {
+            transform-origin: bottom center;
+        }
+
+        .link-preview.preview-bottom {
+            transform-origin: top center;
+        }
+
+
+        .objective-container {
+            background-color: #f8f9fa; /* Light background color */
+            border: 1px solid var(--main-blue); /* Border with main color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Inner spacing */
+            margin: 0px 0; /* Spacing around the box */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        .objective-container h3 {
+            color: var(--main-blue); /* Title color */
+            margin-bottom: 10px; /* Space below the title */
+        }
+
+        .objective-container p {
+            margin: 0 0 10px 0; /* Space between paragraphs */
+            line-height: 1.2; /* Improved readability */
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 2px solid var(--main-blue);
+            font-size: 14px;
+            color: #666;
+        }
+
+
+    </style>
+</head>
+<body>
+    <body>
+            <div class="landing">
+                <div class="name-title">
+                    <h1>NATHAN ORDONEZ</h1>
+                    <h2>Research Scientist/Engineer - Deep Learning</h2>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:nathanaxcan@gmail.com">Email</a> |
+                    <a href="https://www.linkedin.com/in/nathan-axcan-ordonez/">LinkedIn</a> |
+                    <a href="https://github.com/nataxcan">GitHub</a>
+                </div>
+                <div class="objective-container">
+                    <div class="section">
+                        <h3>My Objective:</h3>
+                        <p><strong>Targeting</strong> a high-impact research or research-driven role in Deep Learning (the more theoretical the better) that maximizes learning, adaptability, and engagement with experts, so I can <strong>contribute</strong> my experimental modeling and research synthesis skills. <strong>Are welcome:</strong> corporate entrepreneurship, innovative productization, people management, cross-department/team communication, and software engineering.</p>
+                    </div>
+                    <div class="section">
+                        <h3>Who I Am:</h3>
+                        <p>Passionate, a hacker, intellectual, attracted to depth and complexity, love studying hardware but most passionate about theoretical considerations.</p>
+                    </div>
+                </div>
+                <div class="professional-summary">
+                    <section class="section">
+                        <h2>Summary</h2>
+                        <div class="experience-item">
+                        <ul class="achievements-list">
+                        <li><strong>Education: 2024</strong> MSc Computer Science (AI Track) and <strong>2020</strong> BSc Computer Science & Engineering from TU Delft</li>
+                        
+                        <li><strong>Research Highlights:</strong>
+                            <ul>
+                                <li>(Master's Thesis, 2024) Novel Deep Learning architectures for DNA basecalling improving state of the art in accuracy/throughput trade-off, throughput by up to 85%</li>
+                                <li>(Elsevier, 2024) Published power network optimization research achieving 48x speedup over baselines</li>
+                                <li>(2023) Pioneered open-loop reinforcement learning task, introducing first ever open-loop loss in pre-print paper</li>
+                                <li>(Bachelor's Thesis, 2022) First reproduction of DeepMind's FCP method</li>
+                            </ul>
+                        </li>
+                        
+                        <li><strong>Professional Track:</strong>
+                            <ul>
+                                <li>(2022) Led technical development of Hololearn Virtual Teaching System at TU Delft New Media Center</li>
+                                <li>(2020-2021) Founding Data Scientist at CorTexter, developing core ML pipeline</li>
+                                <li>(2020-2021) Venture Capital experience as Startup Analyst at Plug&Play Tech Center</li>
+                            </ul>
+                        </li>
+                        
+                        <li><strong>Key Achievements:</strong>
+                            <ul>
+                            <li>(2023) Jury winner of Ready to Startup for space transport platform</li>
+                            <li>(2021) First place in Yes!Delft Students hackathon</li>
+                            <li>(2023) Selected for Nova Network (top ~3% of applicants)</li>
+                            </ul>
+                        </li>
+                        </ul>
+                        </div>
+                        </section>
+                </div>
+            </div>
+            
+            <div class="grid-container">
+                <div class="main-column">
+                    <section class="section">
+                        <h2>Research Achievements</h2>
+                        <div class="experience-item">
+                            <ul class="achievements-list">
+                                <li><strong>(2024) Master's Thesis:</strong> Novel Deep Learning Architectures for DNA Basecalling published in TU Delft repository (link pending as thesis is under embargo)</li>
+                                <ul>
+                                    <li>Basecalling is a task where a neural network turns a one-dimensional signal into a DNA nucleotide sequence</li>
+                                    <li>Contributed the discovery of the impact of distillation on state-of-the-art architectures, which improved throughput at the high-accuracy regime by up to 85 percent.</li>
+                                    <li>Also contributed three novel architectures:
+                                        <ul>
+                                            <li>DenseBaseConv, a convolution-based architecture modification of state-of-the-art Bonito which, at equivalent optimization levels and at high-throughput regimes, improved throughput by up to 35% at equal accuracy, significantly improving the speed-accuracy trade-off in DNA sequencing analysis</li>
+                                            <li>Bonito-GRU, a model based on state-of-the-art Bonito where we showed that LSTM layers can be replaced with GRU layers without accuracy losses, reducing encoder FLOPs by 25%</li>
+                                            <li>SACall-CoT, a model based on state of the art in transformer-based basecallers SACall where the architecture is modified to include the chain-of-thought mechanism showing a small improvement in accuracy at matched throughput</li>
+                                        </ul>
+                                    <li>Research supervised by Distinguished Researcher Peter Hofstee (IBM) and Associate Professor Zaid Al Ars (TU Delft), focusing on accelerating genomics research by reducing computational bottlenecks (basecalling is a large source of cost for long-read sequencing, which will be commonplace in 10 years)</li>
+                                    <li>Conducted comprehensive analysis of sequence-to-sequence models' performance in basecalling, including transformers, RNNs, and state-space models, including </li>
+                                </ul>
+
+                                <li><strong>(2024) Research publication:</strong> on power networks optimization and efficiency <a href="https://doi.org/10.1016/j.ijepes.2024.110112">published in Elsevier's International Journal of Electrical Power & Energy Systems</a></li>
+                                    <ul>
+                                        <li>Born out of a GNN-focused project, I worked with two PhD students focusing on ML for electrical grids. Our model predicts variables in a power grid using a GNN trained using a physics-informed loss to shorten the time needed per simulation.</li>
+                                        <li>I was responsible for setting up the training pipeline, initial design decisions and an interpretability study of the model.</li>
+                                    </ul>
+                                <li><strong>(2022) Bachelor's Thesis:</strong> <a href="https://resolver.tudelft.nl/uuid:ca39cc40-049a-42ce-ba6f-003e5c358351">First public implementation of DeepMind's "Fictitious co-play (FCP)" method</a>, presented to top-ranked <a href="https://airankings.org/authorinfo/?id=200012241">(at TU Delft)</a> ML researcher <a href="https://www.fransoliehoek.net/wp/">Frans Oliehoek</a> (Grade: 9/10)</li>
+                                <li><strong>(2023) Research Paper:</strong> Developed <a href="https://arxiv.org/abs/2312.02665">novel RL blindness technique</a> under ex-Oxford researcher <a href="https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/software-technology/algorithmics/people/wendelin-boehmer">Wendelin Böhmer</a></li>
+                                <ul>
+                                    <li>Started as part of a course and on the basis of professor Böhmer's idea, we work on a novel task, <i>observation robustness</i>, where an agent's state is temporarily inaccessible, but the agent must keep solving a task (here, finding its way through a maze).</li>
+                                    <li>We frame this as an open-loop control task, and contribute the first open-loop loss applied to online deep reinforcement learning. Our agent not only successfully becomes robust, but generalises to longer open-loop timespans than it was trained on.</li>
+                                    <li>I mainly contributed to codebase design, experimental setup, and final experiment decisions, as well as the writing of the paper.</li>
+                                </ul>
+                                <li><strong>(2022) Research Project:</strong> Achieved 9.5 grade on quantum computing project implementing variational eigensolver on QuTech's 5-Qubit quantum computer</li>
+                                <ul>
+                                    <li>As part of the Quantum Science and Information Minor at the prestigious QuTech insitute within the Factulty of Applied Sciences and under professor <a href="https://qutech.nl/person/menno-veldhorst/">Menno Veldhorst</a> who was part of the first team to ever show universal quantum logic in silicon, I was part of a 5-person team implementing a variational eigensolver from research running for the first time on a TU Delft quantum computer.</li>
+                                    <li>We were praised for the high quality of the results despite being a team of computer scientists with only one physics student, as well as the quality of our analysis of the results.</li>
+                                    <li>As this was done within the challenging Quantum Science and Information minor, which is not recommended for Computer Science students due to its difficulty, I learned a lot about the physicist's way of solving and framing challenging problems.</li>
+                                </ul>
+                                <li><strong>(2023) Research blog post:</strong> Demonstrated competitive gesture recognition model training using pre-trained DINOv2 embeddings</li>
+                                    <ul>
+                                        <li>This was part of the Computer Vision course of my Msc degree.</li>
+                                        <li>Given the semantic nature of the DINOv2 model's loss, we wanted to know if enough positional information was present to use it to improve on the state of the art in a small benchmark gesture recognition dataset. This was achieved successfully.</li>
+                                        <li>I was responsible for designing the experimental setup, generating results and the subsequent write-up.</li>
+                                    </ul>
+                            </ul>
+                        </div>
+                    </section>
+            
+                    <section class="section">
+                        <h2>Professional Experience</h2>
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <strong>(2022) Project Lead and Technical Lead for <a href="https://www.educationandlearning.nl/projects/hololearn">Hololearn Virtual Teaching System (<a href="https://github.com/hololearn-project/hololearn-hub">GitHub</a>)</strong>
+                            </div>
+                            <ul class="achievements-list">
+                                <li>On the basis of a broad and nondescript research direction given by professor <a href="https://www.bibeglimbu.me">Bibeg Limbu</a> under his supervision and the supervision of TU Delft's <a href="https://newmediacentre.tudelft.nl">New Media Center</a>, which was given funding for the idea but no actual direction in which to go with the project I:</li>
+                                <ul>
+                                    <li>ideated the actual research direction of the project</li>
+                                    <li>turned the research direction into a concrete project to be broken down into a list of requirements</li>
+                                    <li>took leadership of a team of 5 students serving as software engineers and oversaw their work</li>
+                                    <li>attracted a proposal for collaboration from the Technologico de Monterrey university which sought to partner with TU Delft at large</li>
+                                </ul>
+                                <li>from this project, I learned how to:</li>
+                                <ul>
+                                    <li>dynamically identify bottlenecks during the progression of a project and mitigate them, on a daily basis</li>
+                                    <li>quickly acquire domain-specific knowledge from developers to help them in finding solutions to domain-specific problems (we had a LiDAR-processing and serving team, a web-interface and 3D rendering team, and a web-networking + data streaming + peer-to-peer connection management team which I was mainly working on)</li>
+                                    <li>conduct market research in software solutions and compare available options, evaluate them based on project requirements</li>
+                                </ul>
+                                <li>my work led to further research into life-sized semi-transparent display technology for distance guest teaching between universities, an invitation of partnership from Technologico de Monterrey university with TU Delft, and a <a href="https://research.tudelft.nl/en/publications/hololearn-using-holograms-to-support-naturalistic-interaction-in-">workshop publication.</a></li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <strong>(2020-2021) Founding Data Scientist - <a href="https://www.cortexter.com">CorTexter</a></strong>
+                            </div>
+                            <ul class="achievements-list">
+                                <li>initially an internship turned into full employment, I was their first Data Scientist and eventually oversaw the work of their second data science hire, all under supervision by CTO <a href="https://www.linkedin.com/in/eriktromp/">Erik Tromp</a></li>
+                                <li>I developed the company's data science pipeline, which processes a job vacancy to generate annotations and text-level metrics highlighting socio-economic biases and overall quality of the text</li>
+                                <li>As a result of my pipeline, our platform reached the quality of established competition's metrics, and went beyond by tailoring job vacancy metrics to personality and intelligence characteristics of desired hires using governmental dataset data.</li>
+                                <li>As part of their job vacancy creation tool, I built a multilingual neural search engine, able to flexibly match a job description to an officially recognised job title (i.e. "tooth doctor" or "Zahnarzt" resolves to "dentist")</li>
+                                <li>as part of an ethnic bias detection system, under their CTO I trained an NLP language model on tweets containing skin-coloured emojis</li>
+                                <li>largely I was left to design systems, ideate functionalities, and make advanced design decisions on my own, with CTO Erik Tromp simply overseeing results</li>
+                                <li>My work led to most of their competitive advantage, causing their integration into recruitment software <a href="https://ubeeo.nl/koppelingen/cortexter/">Ubeeo</a>, <a href="https://carerix.com/en/integrations/cortexter/">Carerix</a>, and <a href="https://www.otys.com/en/partners-integrations/cortexter/">Otys</a>.</li>
+                                <!-- <li>Developed emoji prediction system for Twitter data using proprietary NN architecture</li>
+                                <li>Built comprehensive NLP pipeline integrating multiple data sources</li>
+                                <li>Implemented neural retrieval system using Facebook's FAISS library</li> -->
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <strong>(2020-2021) Venture Capital Startup Analyst - <a href="https://www.plugandplaytechcenter.com">Plug&Play Tech Center</a></strong>
+                            </div>
+                            <ul class="achievements-list">
+                                <li>P&P is among the largest VC funds in California by total size</li>
+                                <li>conducted startup analysis of hundreds of startup pitch decks, with bi-weekly meetings to compare our reasoning to the fund manager's reasonings</li>
+                                <li>attended bi-weekly lectures organised by Plug and Play Tech Center</li>
+                                <li>internship culminated in me presenting an analysis of a startup pitch deck, it was praised by the fund manager for its story-driven nature</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <strong>(2020) Teaching Assistant - TU Delft</strong>
+                            </div>
+                            <ul class="achievements-list">
+                                <li>while in my bachelor, I helped in developing masters-level course on Conversational Agents</li>
+                                <li>I designed a conversational agent using the <a href="https://www.furhatrobotics.com">Furhat SDK</a> (robotics platform) which students had to reproduce with facial emotion recognition and head-pose tracking</li>
+                                <li>after the course started, I provided technical support to Master's students, and graded them</li>
+                            </ul>
+                        </div>
+                    </section>
+            
+                    <section class="section">
+                        <h2>Innovation & Entrepreneurship</h2>
+                        <div class="experience-item">
+                            <ul class="achievements-list">
+                                <li>(2023) Jury winner of Ready to Startup (€500 prize) for in-space transport coordination platform, validated by NASA contractor and new space station developer Axiom Space</li>
+                                <li>(2021) 1st place at <a href="https://www.reef.support/blogs/blog-hackathon">Yes!Delft Students hackathon</a> for market development strategy and presentation for a TU Delft start-up aiming to help sustain coral reefs</li>
+                                <li>(2021) 3rd place in Best Delft ideation contest for eco-friendly beer factory design</li>
+                                <li>(2023) Selected member of Nova Network (top ~3% of applicants)</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="section">
+                        <h2>Projects</h2>
+                        <ul>
+                            <li>Host of the <a href="https://slim.radio/gemsofthepast/monday-morning-motivation">Monday Morning Podcast</a>, hosted by UvA Radio at the time, now Slim Radio; me and my ho-host interviewed specifically highly academically achieving students (one of whom graduated from TU Delft at the age of 17)</li>
+                        </ul>
+                    </section>
+                    
+                </div>
+                <div class="side-column">
+                    <section class="section">
+                        <h2>Languages</h3>
+                        <ul>
+                            <li>English (fluent)</li>
+                            <li>French (fluent, mother tongue)</li>
+                            <li>Spanish (fluent, father tongue)</li>
+                            <li>German (B2 level, public school)</li>
+                            <li>Dutch (basic)</li>
+                            <li>Latin (learning)</li>
+                        </ul>
+                    </section>
+                    <section class="section">
+                        <h2>References:</h3>
+                        <a href="https://en.wikipedia.org/wiki/Peter_Hofstee">Peter Hofstee</a>
+                        <ul>
+                            <li>Distinguished Researcher at IBM, responsible for groundbreaking "Cell" CPU architecture, first supercomputer to reach one petaflop (Roadrunner), Power 7,8,9,10 architectures, contributed to ideation of cpu-gpu shared memory architecture (now used by Nvidia)</li>
+                            <li><strong>email:</strong> <a href="hofstee@us.ibm.com">hofstee@us.ibm.com</a></li>
+                            <li><strong>phone:</strong> +15122843193 (please email before calling)</li>
+                        </ul>
+                        <a href="http://abs.ewi.tudelft.nl/zaid/">Zaid Al Ars</a>
+                        <ul>
+                            <li>Associate professor at TU Delft, leader of Accelerated Big Data Systems group, co-founder of Teratide and Bluebee (<a href="https://www.tudelft.nl/2020/valorisatie/spin-off-van-de-tu-delft-bluebee-overgenomen-technologie-voor-snellere-dna-analyses-wereldwijd-toegepast">acquired by Illumina</a>) successful big data processing deep-tech startups</li>
+                            <li><strong>email:</strong> <a href="Z.Al-Ars@tudelft.nl">Z.Al-Ars@tudelft.nl</a></li>
+                            <li><strong>phone:</strong> +31152789097</li></li>
+                        </ul>
+                        
+                    </section>
+                    <section class="section">
+                        <h2>Education</h2>
+                        <div class="experience-item">
+                            <strong>(2024) MSc Data Science and Artificial Intelligence Technology (cum laude)</strong>
+                            <br>TU Delft
+                            <div class="highlight-box">
+                                Notable Grades:
+                                <ul>
+                                    <li>Machine Learning 1 (10.0) considered hardest course in master</li>
+                                    <li>Intelligent Decision Making (8.5)</li>
+                                    <li>Seminar Computer Vision (8.3)</li>
+                                    <li>Formal Methods for Learned Systems (8.4)</li>
+                                </ul>
+                                Relevant Courses per Domain:
+                                <ul>
+                                    <li>Involving CUDA, C++ Programming:
+                                        <ul>
+                                            <li>Advanced Computing Systems (8.0)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Involving Reinforcement Learning:
+                                        <ul>
+                                            <li>Intelligent Decision Making Project (8.5)</li>
+                                            <li>Artificial Intelligence Techniques (7.5)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Involving Deep Learning:
+                                        <ul>
+                                            <li>Machine Learning for Graph Data (7.8)</li>
+                                            <li>Seminar Computer Vision by Deep Learning (8.3)</li>
+                                            <li>Deep Learning (7.9)</li>
+                                            <li>Seminar Formal Methods for Learned Systems (8.4)</li>
+                                            <li>Machine Learning 1 (10.0)</li>
+                                            <li>Conversational Agents (8.0)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Involving Entrepreneurship:
+                                        <ul>
+                                            <li>Idea to Start-up (done during Bachelor) (8.0)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="experience-item">
+                            <strong>(2022) BSc Computer Science and Engineering</strong>
+                            <br>TU Delft
+                            <div class="highlight-box">
+                                <p><strong>Specialisation:</strong> Data Science</p>
+                                <p><strong>Minor:</strong> Prestigious world-class QuTech institute (GPA: 7.8), considered most difficult minor for computer science students (students were strongly recommended not to pursue it).</p>
+                            </div>
+                        </div>
+                    </section>
+            
+                    <section class="section">
+                        <h2>Technical Expertise</h2>
+                        <div class="skills-container">
+                            <div class="skill-category">
+                                <strong>Core Skills</strong>
+                                <ul>
+                                    <li>Deep Learning & Neural Networks:</li>
+                                    <ul>
+                                        <li>PyTorch framework</li>
+                                        <li>Huggingface Transformers</li>
+                                        <li>TinyGrad framework</li>
+                                        <li>Keras</li>
+                                        <li>Facebook fairseq</li>
+                                        <li>Data analysis tools (pandas, numpy, matplotlib...)</li>
+                                    </ul>
+                                    <li>Reinforcement Learning</li>
+                                    <ul>
+                                        <li>Stable Baselines codebase</li>
+                                    </ul>
+                                    <li>Computer Vision, data streaming</li>
+                                    <ul>
+                                        <li>OpenCV</li>
+                                        <li>WebRTC</li>
+                                    </ul>
+                                    <li>Quantum Computing</li>
+                                    <ul>
+                                        <li>Qiskit (IBM)</li>
+                                    </ul>
+                                    <li>CUDA/C++ Programming</li>
+                                    <li>API serving:</li>
+                                    <ul>
+                                        <li>Flask</li>
+                                        <li>Gunicorn</li>
+                                        <li>Node.js</li>
+                                    </ul>
+                                    <li>General dev tools:</li>
+                                    <ul>
+                                        <li>Linux CLI</li>
+                                        <li>General computer setup (setting up new code, frameworks, complicated installs, I am very comfortable with the command line)</li>
+                                        <li>Docker</li>
+                                        <li>Three.js</li>
+                                    </ul>
+                                    <li>General knowledge:</li>
+                                    <ul>
+                                        <li>Deep Learning Accelerator market</li>
+                                        <li>Silicon Industry in general</li>
+                                        <li>AI startup market</li>
+                                        <li>AI market in general</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section">
+                        <h2>Personal interests</h2>
+                        areas:
+                        <ul>
+                            <li>Deep Learning (unsupervised, self-supervised, complexity of representations, large-scale representation learning, interpretability)</li>
+                            <li>Robotics (humanoid, quadruped, fixed-wing and ornithopter)</li>
+                            <li>Reinforcement Learning (exploration)</li>
+                            <li>Silicon Industry (AI accelerator design and market)</li>
+                            <li>Psychology (Analytical, Evolutionary)</li>
+                            <li>History/Theology</li>
+                        </ul>
+                        favourite papers:
+                        <ul>
+                            <li><a href="https://arxiv.org/abs/2105.01601">[x]</a> MLP-Mixer: An all-MLP Architecture for Vision</li>
+                            <li><a href="https://arxiv.org/abs/2207.02098">[x]</a> Neural Networks and the Chomsky Hierarchy</li>
+                            <li><a href="https://arxiv.org/abs/1802.06070">[x]</a> Diversity is All You Need: Learning Skills without a Reward Function</li>
+                            <li><a href="https://arxiv.org/abs/2408.05804">[x]</a> A Single Goal is All You Need: Skills and Exploration Emerge from Contrastive RL without Rewards, Demonstrations, or Subgoals</li>
+                        </ul>
+                        books:
+                        <ul>
+                            <li>reading: Proofs and Types (Jean-Yves Girard, Yves Lafont, Paul Taylor)</li>
+                            <li>reading: Lingua Latina Per Se Illustrata (Hans Ørberg)</li>
+                            <li>recent read: Crime and Punishment (Fyodor Dostoevsky)</li>
+                            <li>recent read: Musashi (Eiji Yoshikawa)</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+    <div id="link-preview" class="link-preview"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const previewBox = document.getElementById('link-preview');
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseover', (e) => {
+                const url = link.href;
+                if (url) {
+                    previewBox.style.display = 'block';
+                    previewBox.innerHTML = `<strong>Preview:</strong> <br> ${url}`;
+                    
+                    // Reset position and remove any previous positioning classes
+                    previewBox.style.left = 'auto';
+                    previewBox.style.right = 'auto';
+                    previewBox.style.top = 'auto';
+                    previewBox.style.bottom = 'auto';
+                    previewBox.classList.remove('preview-left', 'preview-right', 'preview-top', 'preview-bottom');
+                }
+            });
+
+            link.addEventListener('mousemove', (e) => {
+                const viewportWidth = window.innerWidth;
+                const viewportHeight = window.innerHeight;
+                const previewWidth = previewBox.offsetWidth;
+                const previewHeight = previewBox.offsetHeight;
+
+                let left = e.pageX + 15;
+                let top = e.pageY + 15;
+
+                // Adjust horizontal position if too close to right edge
+                if (left + previewWidth > viewportWidth) {
+                    left = e.pageX - previewWidth - 15;
+                    previewBox.classList.add('preview-left');
+                } else {
+                    previewBox.classList.add('preview-right');
+                }
+
+                // Adjust vertical position if too close to bottom edge
+                if (top + previewHeight > viewportHeight) {
+                    top = e.pageY - previewHeight - 15;
+                    previewBox.classList.add('preview-top');
+                } else {
+                    previewBox.classList.add('preview-bottom');
+                }
+
+                previewBox.style.left = `${left}px`;
+                previewBox.style.top = `${top}px`;
+            });
+
+            link.addEventListener('mouseout', () => {
+                previewBox.style.display = 'none';
+            });
+        });
+    });
+
+    </script>
+    <footer class="footer">
+        Website inspired by <a href="https://tinygrad.org">tinygrad.org</a>
+      </footer>
+      
+</body>
+</html>
