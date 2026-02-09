@@ -240,14 +240,15 @@
                         <ul>
                             <!-- <li>Integrated cutting-edge attention modifications to vLLM allowing low-overhead parallel prefill</li> -->
                             <li>Implemented independent KV-caches (<a href="https://arxiv.org/abs/2409.15355">block-sparse attention</a>) in vLLM, achieving:</li>
-                            <li>• improvements in KV cache hit rates</li>
-                            <li>• long-context cold-start prefill speedups</li>
+                            <li>• improvements in KV cache hit rates causing 10x TTFT reduction</li>
+                            <li>• long-context cold-start prefill speedups (~2.5x on H100)</li>
                             <li>• detailed evaluations / output quality study</li>
-                            <li>• Explored state combination methods for all hybrid LLM architectures</li>
+                            <li>• Explored state combination methods for SSM hybrid LLM architectures</li>
                             <li>(SSM, Liquid, LightningAttn.)</li>
                             <li>• Supervised by early and major vLLM contributor</li>
                             <li>&#x2514;> <i>Resulted in public release as IBM's <a href="https://github.com/IBM/vllm">official vLLM public fork</a></i></li>
                             <li>&#x2514;> <i>+ Arguably the fastest end-to-end implementation of LLM inference<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with this feature among the labs</i></li>
+                            <li>&#x2514;> <i>+ led to <a href=https://arxiv.org/pdf/2511.02749>MLSys 2026 publication</a> (pending)</i></li>
                         </ul>
                     </li>
                     <li><span class="highlight"><b>Project & Design Lead</b> @ <a href="https://www.educationandlearning.nl/projects/hololearn">Hololearn</a> TU Delft research group (2022) [5mo]</span>
@@ -313,11 +314,11 @@
             <section class="section">
                 <h2>References</h2>
                 <div class="references">
-                    <span class="highlight">Dr. Thomas Parnell</span> - Principal Research Scientist, IBM
+                    <!-- <span class="highlight">Dr. Thomas Parnell</span> - Principal Research Scientist, IBM
                     <ul>
                         <li><i>Key vLLM contributor, leader of global research team optimizing LLM inference on cutting-edge systems.</i></li>
                         <li>Email: tpa@zurich.ibm.com</li>
-                    </ul>
+                    </ul> -->
                     <span class="highlight">Dr. Peter Hofstee</span> - Distinguished Researcher, IBM
                     <ul>
                         <li>"if you taught a deep learning models class I would want to attend it"</li>
