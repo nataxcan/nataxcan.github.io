@@ -127,6 +127,11 @@
             color: var(--text-color);
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         ul.schedule-list, ul.travel-list {
@@ -161,6 +166,31 @@
             line-height: 1.5;
         }
 
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 6px 16px;
+            border: 1px solid var(--accent-color);
+            color: var(--text-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
         footer {
             margin-top: auto;
             padding: 40px 0;
@@ -179,6 +209,12 @@
 
         .hidden {
             display: none;
+        }
+
+        .venue-info {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -203,10 +239,15 @@
             </div>
 
             <div class="date">June 27, 2026</div>
-            <div class="location">Tuja, Latvia</div>
+            <div class="location">Tēva Mājas Garoza, Tūja, Latvia</div>
 
             <div class="countdown" id="countdown-timer">
                 Calculating...
+            </div>
+
+            <div class="action-buttons" style="justify-content: center;">
+                <a href="https://www.google.com/maps/search/?api=1&query=T%C4%93va+M%C4%81jas+Garoza%2C+T%C5%ABja%2C+Latvia" target="_blank" class="btn">Map</a>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Enia+%26+Nathan%27s+Wedding&dates=20260627T133000Z/20260628T090000Z&details=Wedding+celebration+of+Enia+and+Nathan+at+T%C4%93va+M%C4%81jas+Garoza.&location=T%C4%93va+M%C4%81jas+Garoza%2C+T%C5%ABja%2C+Latvia" target="_blank" class="btn">Calendar</a>
             </div>
         </div>
 
@@ -214,7 +255,14 @@
             <h2>Schedule</h2>
 
             <div class="content-block">
-                <h3>Day One - Saturday, June 27, 2026</h3>
+                <h3>
+                    Day One - Saturday, June 27, 2026
+                    <div class="action-buttons">
+                        <a href="https://www.google.com/maps/search/?api=1&query=T%C4%93va+M%C4%81jas+Garoza%2C+T%C5%ABja%2C+Latvia" target="_blank" class="btn">Map</a>
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Enia+%26+Nathan%27s+Wedding&dates=20260627T133000Z/20260628T090000Z&details=Wedding+celebration+of+Enia+and+Nathan+at+T%C4%93va+M%C4%81jas+Garoza.&location=T%C4%93va+M%C4%81jas+Garoza%2C+T%C5%ABja%2C+Latvia" target="_blank" class="btn">Calendar</a>
+                    </div>
+                </h3>
+                <div class="venue-info">Tēva Mājas Garoza, Tūja, Latvia</div>
                 <ul class="schedule-list">
                     <li><span class="time">16:00</span> Arrival at the venue</li>
                     <li><span class="time">16:30</span> Ceremony begins</li>
