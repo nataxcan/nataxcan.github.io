@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enia & Nathan's Wedding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f7f5f2;
+            --text-color: #5c5552;
+            --accent-color: #8b837e;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        .header-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        nav {
+            margin-bottom: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: #000;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+        }
+
+        .main-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 6rem;
+            line-height: 1.2;
+            margin: 40px 0;
+            color: var(--text-color);
+        }
+
+        .main-names .and {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            margin: 20px 0;
+            display: block;
+            color: var(--accent-color);
+        }
+
+        .date {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            margin-top: 60px;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+        }
+
+        .countdown {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            word-spacing: 5px;
+            margin-bottom: 80px;
+        }
+
+        .section {
+            margin: 60px 0;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        .section h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .content-block {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .content-block h3 {
+            margin-top: 0;
+            color: var(--text-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        ul.schedule-list, ul.travel-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.schedule-list li, ul.travel-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .time {
+            font-weight: 500;
+            min-width: 60px;
+            margin-right: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .faq-answer {
+            color: var(--accent-color);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 40px 0;
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            width: 100%;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-names">Enia & Nathan</div>
+
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')" id="link-home" class="active">Home</a></li>
+                <li><a href="#" onclick="showSection('schedule')" id="link-schedule">Schedule</a></li>
+                <li><a href="#" onclick="showSection('travel')" id="link-travel">Travel</a></li>
+                <li><a href="#" onclick="showSection('faqs')" id="link-faqs">FAQs</a></li>
+            </ul>
+        </nav>
+
+        <div id="section-home">
+            <div class="main-names">
+                <div>Nathan</div>
+                <div class="and">and</div>
+                <div>Enia</div>
+            </div>
+
+            <div class="date">June 27, 2026</div>
+            <div class="location">Tuja, Latvia</div>
+
+            <div class="countdown" id="countdown-timer">
+                Calculating...
+            </div>
+        </div>
+
+        <div id="section-schedule" class="section hidden">
+            <h2>Schedule</h2>
+
+            <div class="content-block">
+                <h3>Day One - Saturday, June 27, 2026</h3>
+                <ul class="schedule-list">
+                    <li><span class="time">16:00</span> Arrival at the venue</li>
+                    <li><span class="time">16:30</span> Ceremony begins</li>
+                    <li><span class="time">18:00</span> Aperitif & mingling</li>
+                    <li><span class="time">19:30</span> Dinner, activities & dancing</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Day Two - Sunday, June 28, 2026</h3>
+                <ul class="schedule-list">
+                    <li><span class="time">10:00</span> Breakfast</li>
+                    <li><span class="time">11:00</span> Check-out from rooms</li>
+                    <li><span class="time">12:00</span> Leaving the venue</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="section-travel" class="section hidden">
+            <h2>Travel & Accommodations</h2>
+
+            <div class="content-block">
+                <h3>Getting There</h3>
+                <p>The wedding is in Tūja, a small coastal town about an hour from Riga. Guests should fly into Riga International Airport (RIX). Direct flights from Switzerland or the Netherlands are available via AirBaltic, Transavia, Lufthansa, LOT Airlines, and Air Dolomiti.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>From the Airport</h3>
+                <ul class="travel-list">
+                    <li><strong>Taxi:</strong> Bolt app (approx. €10)</li>
+                    <li><strong>Public Transport:</strong> Bus tickets €1.50 via Mobilly app</li>
+                    <li><strong>Car Sharing:</strong> Bolt Drive, CityBee, CarGuru (approx. €25/day)</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Accommodations</h3>
+                <p>On June 27 and 28, we will provide shared or individual room accommodations at the venue, along with meals and transportation from/to Riga city center.</p>
+            </div>
+        </div>
+
+        <div id="section-faqs" class="section hidden">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="content-block">
+                <div class="faq-item">
+                    <div class="faq-question">What should I wear?</div>
+                    <div class="faq-answer">Dress formally, but no specific style is required. Women should avoid wearing white. Avoid thin or pointy heels due to beach/grass terrain. Bring a warm layer and possibly an umbrella!</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What is the RSVP deadline?</div>
+                    <div class="faq-answer">Please RSVP by April 15, 2026.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I bring a plus one?</div>
+                    <div class="faq-answer">This is a small, intimate wedding; plus ones are only allowed if specifically mentioned on your invitation.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you have a gift registry?</div>
+                    <div class="faq-answer">We prefer not to receive large physical gifts. Contributions toward our honeymoon and new life together are warmly welcomed.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Will there be dietary options?</div>
+                    <div class="faq-answer">Yes. Please let us know by April 15, 2026, if you need vegetarian, vegan, or gluten-free meals, or have allergies.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <span>© 2026 Enia & Nathan. We can't wait to celebrate with you!</span>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section, #section-home').forEach(el => {
+                el.classList.add('hidden');
+            });
+
+            document.querySelectorAll('nav a').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            document.getElementById('section-' + sectionId).classList.remove('hidden');
+            document.getElementById('link-' + sectionId).classList.add('active');
+        }
+
+        const weddingDate = new Date('June 27, 2026 16:30:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown-timer").innerHTML = "Today is the day!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown-timer").innerHTML = 
+                days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
